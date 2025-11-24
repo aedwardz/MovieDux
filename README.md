@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# MovieDux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React app for browsing movies (built with Create React App).
 
-## Available Scripts
+## Quick start — run locally
 
-In the project directory, you can run:
+Prerequisites:
 
-### `npm start`
+- Node.js (v14+ recommended). Install from https://nodejs.org/.
+- A terminal (PowerShell examples are shown below).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```powershell
+npm install
+```
 
-### `npm test`
+Start the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```powershell
+npm start
+```
 
-### `npm run build`
+- The dev server uses Create React App defaults and will open the app at http://localhost:3000.
+- If the browser doesn't open automatically, open that address manually.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run tests:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```powershell
+npm test
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build for production:
 
-### `npm run eject`
+```powershell
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This creates an optimized `build/` folder ready for deployment.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project structure (high level)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `public/` — static assets and sample data (e.g. `public/movies.json`).
+- `src/` — source code (React components, styles, tests).
+  - `src/index.js` — app entry.
+  - `src/App.js` — main app component.
+  - `src/components/` — UI components (e.g., `MoviesGrid.js`, `MovieCard.js`, `WatchList.js`).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes & troubleshooting
 
-## Learn More
+- If port 3000 is already in use, the dev server will prompt to use another port. You can accept or stop the process using that port.
+- If you get permission/script execution errors on Windows PowerShell, try running PowerShell as Administrator or adjust execution policy cautiously.
+- Check the terminal and your browser console for build or runtime errors — stack traces will point to the problematic file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Inspect sample data
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app ships with a sample dataset at `public/movies.json`. Edit this file if you want to change the movies shown by the app without touching source code.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Small project — feel free to open issues or submit pull requests.
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+No license file is included in this repo. Add a license if you plan to publish or share this project.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
+If you'd like, I can also run `npm install` and `npm start` locally (in your environment) to verify the instructions and update this README with any extra notes (port changes, warnings). Let me know if you want me to do that now.
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
